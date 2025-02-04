@@ -36,7 +36,7 @@
     },
     {
         "p_rel_url" : "adil505/dataproject/refs/heads/main/Data/AdventureWorks_Sales_2016.csv",
-        "p_sink_folder" : "AdventureWorks_Sales_201",
+        "p_sink_folder" : "AdventureWorks_Sales_2016",
         "p_sink_file" : "AdventureWorks_Sales_2016.csv"
     },
     {

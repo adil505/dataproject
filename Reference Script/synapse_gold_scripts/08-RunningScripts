@@ -1,0 +1,2 @@
+SELECT * FROM gold.ext_calendar
+SELECT * FROM gold.calendar

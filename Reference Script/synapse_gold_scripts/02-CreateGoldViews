@@ -1,0 +1,126 @@
+--- create view for calendar data ---
+
+CREATE VIEW gold.calendar
+AS
+SELECT
+*
+FROM
+OPENROWSET
+(
+    BULK 'https://adiladls.dfs.core.windows.net/silver/Calendar/',
+    FORMAT = 'PARQUET'
+)
+AS
+QUERY;
+GO
+
+--- create view for customers data ---
+
+CREATE VIEW gold.customers
+AS
+SELECT
+*
+FROM
+OPENROWSET
+(
+    BULK 'https://adiladls.dfs.core.windows.net/silver/Customers/',
+    FORMAT = 'PARQUET'
+)
+AS
+QUERY;
+GO
+
+--- create view for product categories data ---
+
+CREATE VIEW gold.product_categories
+AS
+SELECT
+*
+FROM
+OPENROWSET
+(
+    BULK 'https://adiladls.dfs.core.windows.net/silver/Product_Categories/',
+    FORMAT = 'PARQUET'
+)
+AS
+QUERY;
+GO
+
+--- create view for product subcateogories data ---
+
+CREATE VIEW gold.product_subcategories
+AS
+SELECT
+*
+FROM
+OPENROWSET
+(
+    BULK 'https://adiladls.dfs.core.windows.net/silver/Product_Subcategories/',
+    FORMAT = 'PARQUET'
+)
+AS
+QUERY;
+GO
+
+--- create view for products data ---
+
+CREATE VIEW gold.products
+AS
+SELECT
+*
+FROM
+OPENROWSET
+(
+    BULK 'https://adiladls.dfs.core.windows.net/silver/Products/',
+    FORMAT = 'PARQUET'
+)
+AS
+QUERY;
+GO
+
+--- create view for returns data ---
+
+CREATE VIEW gold.returns
+AS
+SELECT
+*
+FROM
+OPENROWSET
+(
+    BULK 'https://adiladls.dfs.core.windows.net/silver/Returns/',
+    FORMAT = 'PARQUET'
+)
+AS
+QUERY;
+GO
+
+--- create view for sales data ---
+
+CREATE VIEW gold.sales
+AS
+SELECT
+*
+FROM
+OPENROWSET
+(
+    BULK 'https://adiladls.dfs.core.windows.net/silver/Sales/',
+    FORMAT = 'PARQUET'
+)
+AS
+QUERY;
+GO
+
+--- create view for territories data ---
+
+CREATE VIEW gold.territories
+AS
+SELECT
+*
+FROM
+OPENROWSET
+(
+    BULK 'https://adiladls.dfs.core.windows.net/silver/Territories/',
+    FORMAT = 'PARQUET'
+)
+AS
+QUERY

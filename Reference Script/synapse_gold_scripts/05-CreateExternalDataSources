@@ -1,0 +1,13 @@
+CREATE EXTERNAL DATA SOURCE source_silver
+WITH
+(
+    LOCATION = 'https://adiladls.dfs.core.windows.net/silver/',
+    CREDENTIAL = credential_adil
+)
+
+CREATE EXTERNAL DATA SOURCE source_gold
+WITH
+(
+    LOCATION = 'https://adiladls.dfs.core.windows.net/gold/',
+    CREDENTIAL = credential_adil
+)

@@ -1,0 +1,79 @@
+CREATE EXTERNAL TABLE gold.ext_sales
+WITH
+(
+    LOCATION = 'sales',
+    DATA_SOURCE = source_gold,
+    FILE_FORMAT = format_parquet
+)
+AS
+SELECT * FROM gold.sales
+
+CREATE EXTERNAL TABLE gold.ext_calendar
+WITH
+(
+    LOCATION = 'calendar',
+    DATA_SOURCE = source_gold,
+    FILE_FORMAT = format_parquet
+)
+AS
+SELECT * FROM gold.calendar
+
+CREATE EXTERNAL TABLE gold.ext_customers
+WITH
+(
+    LOCATION = 'customers',
+    DATA_SOURCE = source_gold,
+    FILE_FORMAT = format_parquet
+)
+AS
+SELECT * FROM gold.customers
+
+CREATE EXTERNAL TABLE gold.ext_products
+WITH
+(
+    LOCATION = 'products',
+    DATA_SOURCE = source_gold,
+    FILE_FORMAT = format_parquet
+)
+AS
+SELECT * FROM gold.products
+
+CREATE EXTERNAL TABLE gold.ext_prodcat
+WITH
+(
+    LOCATION = 'product_categories',
+    DATA_SOURCE = source_gold,
+    FILE_FORMAT = format_parquet
+)
+AS
+SELECT * FROM gold.product_categories
+
+CREATE EXTERNAL TABLE gold.ext_prodsubcat
+WITH
+(
+    LOCATION = 'product_subcategories',
+    DATA_SOURCE = source_gold,
+    FILE_FORMAT = format_parquet
+)
+AS
+SELECT * FROM gold.product_subcategories
+
+CREATE EXTERNAL TABLE gold.ext_returns
+WITH
+(
+    LOCATION = 'returns',
+    DATA_SOURCE = source_gold,
+    FILE_FORMAT = format_parquet
+)
+AS
+SELECT * FROM gold.returns
+
+CREATE EXTERNAL TABLE gold.ext_territories
+WITH
+(
+    LOCATION = 'territories',
+    DATA_SOURCE = source_gold,
+    FILE_FORMAT = format_parquet
+)
+AS
+SELECT * FROM gold.territories
